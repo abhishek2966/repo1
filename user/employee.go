@@ -1,7 +1,7 @@
 package user
 
 type Employee struct {
-	Id          int
+	EmployeeId  int
 	Name, Email string
 }
 
