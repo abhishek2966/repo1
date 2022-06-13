@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"repo1/internal/sortutility"
+	"github.com/abhishek2966/repo1/internal/sortutility"
 )
 
 func main() {

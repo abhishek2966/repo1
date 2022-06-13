@@ -1,7 +1,7 @@
 package sortutility
 
 import (
-	"repo1/pkg/sorting"
+	"github.com/abhishek2966/repo1/pkg/sorting"
 )
 
 func SortedSlice(s []int) []int {
