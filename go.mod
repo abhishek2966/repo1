@@ -1,3 +1,3 @@
-module github.com/abhishek2966/repo1
+module repo1
 
 go 1.17
