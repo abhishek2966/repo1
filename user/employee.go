@@ -1,5 +1,6 @@
 package user
 
+// Employee struct
 type Employee struct {
 	EmployeeId  int
 	Name, Email string
