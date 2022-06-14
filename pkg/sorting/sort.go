@@ -23,7 +23,7 @@ func SelectionSort(s []int) {
 
 // bubble sort, time O(n^2), space O(1)
 // repeatedly swap adjacent elements if they are in wrong order and put max elem at right end
-func bubbleSort(s []int) {
+func BubbleSort(s []int) {
 	if len(s) == 0 {
 		return
 	}
@@ -38,7 +38,7 @@ func bubbleSort(s []int) {
 	}
 }
 
-func bubbleSortRecursive(s []int) {
+func BubbleSortRecursive(s []int) {
 	recursiveBubble(s, len(s))
 }
 func recursiveBubble(s []int, sizeSubArray int) {
@@ -55,7 +55,7 @@ func recursiveBubble(s []int, sizeSubArray int) {
 
 // insertion sort, time O(n^2), space O(1)
 // the way we sort playing cards; pick arr[i] and insert into sorted arr[0...i-1]
-func insertionSort(s []int) []int {
+func InsertionSort(s []int) []int {
 	if len(s) <= 1 {
 		return s
 	}
@@ -81,9 +81,9 @@ func insertIntoSorted(s []int, val int) []int {
 	}
 	for i := 0; i < len(s); i++ {
 		if s[i] > val {
-			tempArray := append(newArray[0:i], val)
-			newArray = append(tempArray, newArray[i:]...)
-			break
+			s = append(s[0:i+1], s[i:]...)
+			s[i] = val
+			return s
 		}
 	}
 	return newArray
