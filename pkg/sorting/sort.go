@@ -55,38 +55,15 @@ func recursiveBubble(s []int, sizeSubArray int) {
 
 // insertion sort, time O(n^2), space O(1)
 // the way we sort playing cards; pick arr[i] and insert into sorted arr[0...i-1]
-func InsertionSort(s []int) []int {
-	if len(s) <= 1 {
-		return s
+func InsertionSort(s []int) {
+	for i := 1; i < len(s); i++ {
+	j := i
+	for j > 0 {
+	    if s[j-1] > s[j] {
+		s[j-1], s[j] = s[j], s[j-1]
+	    }
+	    j = j - 1
 	}
-	sortedArr := []int{}
-	for i := 0; i < len(s); i++ {
-		sortedArr = insertIntoSorted(sortedArr, s[i])
-	}
-	return sortedArr
-}
-func insertIntoSorted(s []int, val int) []int {
-	newArray := []int{}
-	if len(s) == 0 {
-		newArray = append(newArray, val)
-		return newArray
-	}
-	if val <= s[0] {
-		newArray = append([]int{val}, s...)
-		return newArray
-	}
-	if val >= s[len(s)-1] {
-		newArray = append(s, val)
-		return newArray
-	}
-	for i := 0; i < len(s); i++ {
-		if s[i] > val {
-			s = append(s[0:i+1], s[i:]...)
-			s[i] = val
-			return s
-		}
-	}
-	return newArray
 }
 
 func swap(s []int, i, j int) {
