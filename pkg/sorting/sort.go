@@ -57,12 +57,13 @@ func recursiveBubble(s []int, sizeSubArray int) {
 // the way we sort playing cards; pick arr[i] and insert into sorted arr[0...i-1]
 func InsertionSort(s []int) {
 	for i := 1; i < len(s); i++ {
-	j := i
-	for j > 0 {
-	    if s[j-1] > s[j] {
-		s[j-1], s[j] = s[j], s[j-1]
-	    }
-	    j = j - 1
+		j := i
+		for j > 0 {
+	    		if s[j-1] > s[j] {
+				s[j-1], s[j] = s[j], s[j-1]
+	    		}
+	    		j = j - 1
+		}
 	}
 }
 
